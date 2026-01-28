@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FCA2C3112F1A7FFA00C2AE35 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FCA2C3102F1A7FFA00C2AE35 /* FirebaseFirestore */; };
+		FCD19D3E2F192581009E6D5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FCD19D3D2F192581009E6D5E /* FirebaseAuth */; };
+		FCD19D402F192581009E6D5E /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = FCD19D3F2F192581009E6D5E /* FirebaseCore */; };
+		FCEA0DD42F190A0200BDA762 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FCEA0DD32F190A0200BDA762 /* SnapKit */; };
+		FCEA0DDD2F19165200BDA762 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCEA0DDC2F19165200BDA762 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FCB6CD062F162D1D00A38031 /* SneakersShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakersShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCEA0DDC2F19165200BDA762 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEA0DD42F190A0200BDA762 /* SnapKit in Frameworks */,
+				FCA2C3112F1A7FFA00C2AE35 /* FirebaseFirestore in Frameworks */,
+				FCD19D402F192581009E6D5E /* FirebaseCore in Frameworks */,
+				FCD19D3E2F192581009E6D5E /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +60,7 @@
 			children = (
 				FCB6CD082F162D1D00A38031 /* SneakersShop */,
 				FCB6CD072F162D1D00A38031 /* Products */,
+				FCEA0DDC2F19165200BDA762 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +92,10 @@
 			);
 			name = SneakersShop;
 			packageProductDependencies = (
+				FCEA0DD32F190A0200BDA762 /* SnapKit */,
+				FCD19D3D2F192581009E6D5E /* FirebaseAuth */,
+				FCD19D3F2F192581009E6D5E /* FirebaseCore */,
+				FCA2C3102F1A7FFA00C2AE35 /* FirebaseFirestore */,
 			);
 			productName = SneakersShop;
 			productReference = FCB6CD062F162D1D00A38031 /* SneakersShop.app */;
@@ -91,7 +109,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					FCB6CD052F162D1D00A38031 = {
 						CreatedOnToolsVersion = 26.0.1;
@@ -107,6 +125,10 @@
 			);
 			mainGroup = FCB6CCFD2F162D1D00A38031;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FCEA0DD22F190A0200BDA762 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FCD19D3C2F192581009E6D5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FCB6CD072F162D1D00A38031 /* Products */;
 			projectDirPath = "";
@@ -122,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEA0DDD2F19165200BDA762 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +173,6 @@
 				INFOPLIST_FILE = SneakersShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -182,7 +204,6 @@
 				INFOPLIST_FILE = SneakersShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -261,6 +282,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -318,6 +340,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -345,6 +368,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FCD19D3C2F192581009E6D5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
+		FCEA0DD22F190A0200BDA762 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FCA2C3102F1A7FFA00C2AE35 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCD19D3C2F192581009E6D5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FCD19D3D2F192581009E6D5E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCD19D3C2F192581009E6D5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FCD19D3F2F192581009E6D5E /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCD19D3C2F192581009E6D5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		FCEA0DD32F190A0200BDA762 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCEA0DD22F190A0200BDA762 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCB6CCFE2F162D1D00A38031 /* Project object */;
 }

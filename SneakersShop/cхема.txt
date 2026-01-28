@@ -1,0 +1,28 @@
+AppCoordinator
+│
+├── OnboardingCoordinator
+│       └── (Finish onboarding)
+│
+├── AuthCoordinator
+│       ├── Welcome
+│       ├── Login
+│       └── Registration
+│
+└── MainTabBarCoordinator
+        │
+        ├── CatalogCoordinator        (Tab 1)
+        │       └── ProductDetailsCoordinator
+        │
+        ├── CartCoordinator           (Tab 2)
+        │       └── OrderSuccessCoordinator (modal)
+        │
+        └── ProfileCoordinator        (Tab 3)
+                ├── EditProfile
+                ├── ChangePassword
+                └── LogoutAlert//
+//  Untitled.swift
+//  
+//
+//  Created by Muslima Sandybay on 15.01.2026.
+//
+
