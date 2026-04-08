@@ -12,6 +12,7 @@ final class MainTabBarCoordinator: Coordinator {
     let id = UUID()
     var onFinish: (() -> Void)?
     let navigationController: UINavigationController
+    private var profileCoordinator: ProfileCoordinator? 
 
     private let tabBarController = UITabBarController()
 
@@ -56,6 +57,7 @@ final class MainTabBarCoordinator: Coordinator {
             navigationController: profileNav)
         profileCoordinator.start()
         
+        self.profileCoordinator = profileCoordinator
         profileNav.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: "person"),

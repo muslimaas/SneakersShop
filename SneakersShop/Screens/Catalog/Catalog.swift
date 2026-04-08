@@ -16,8 +16,6 @@ struct CatalogItem {
     let description: String
     let price: Int
     let image: String
-
-
 }
 
 class CatalogCell: UICollectionViewCell {
@@ -117,8 +115,9 @@ class CatalogCell: UICollectionViewCell {
             $0.top.equalTo(priceLabel.snp.bottom).offset(10)
             $0.left.right.bottom.equalToSuperview().inset(12)
             $0.height.equalTo(36)
-            $0.width.equalTo(166)
+            // width constraint removed; size is determined by left/right + height
         }
     }
 
 }
+

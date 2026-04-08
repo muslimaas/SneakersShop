@@ -6,46 +6,48 @@
 //
 
 import UIKit
+import SafariServices
+import FirebaseAuth
 
 final class ProfileCoordinator {
 
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
 
+
     func start() {
         let vc = ProfileViewController()
-        vc.onEditProfile = { [weak self] in
-            self?.showEditProfile()
-        }
-        vc.onChangePassword = { [weak self] in
-            self?.showChangePassword()
-        }
-        vc.onLogout = { [weak self] in
-            self?.showLogoutAlert()
-        }
+        vc.coordinator = self
         navigationController.setViewControllers([vc], animated: false)
     }
 
-    private func showEditProfile() {
-        navigationController.pushViewController(EditProfileViewController(), animated: true)
+
+    func openAccountInfo() {
+        let vc = AccountInfoViewController()
+        navigationController.pushViewController(vc, animated: true)
     }
 
-    private func showChangePassword() {
-        navigationController.pushViewController(ChangePasswordViewController(), animated: true)
+    func openShoeSize() {
+        let vc = ShoeSizeViewController()
+        navigationController.pushViewController(vc, animated: true)
     }
 
-    private func showLogoutAlert() {
-        let alert = UIAlertController(
-            title: "Sign out",
-            message: "Are you sure you want to sign out?",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Confirm", style: .destructive) { _ in
-        })
-        navigationController.present(alert, animated: true)
+    func openWeb(url: URL) {
+        let safari = SFSafariViewController(url: url)
+        navigationController.present(safari, animated: true)
+    }
+
+
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            navigationController.popToRootViewController(animated: true)
+
+        } catch {
+            print("Logout error:", error)
+        }
     }
 }

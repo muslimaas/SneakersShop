@@ -31,10 +31,9 @@ final class CatalogActionButtonView: UIView {
     private func setupView() {
         addSubview(button)
 
+        // Pin the internal button to this view’s edges; let the parent decide this view’s size.
         button.snp.makeConstraints {
             $0.edges.equalToSuperview()
-            $0.height.equalTo(36)
-            $0.width.equalTo(166)
         }
 
         button.layer.cornerRadius = 16
@@ -62,3 +61,4 @@ final class CatalogActionButtonView: UIView {
         onTap?()
     }
 }
+
